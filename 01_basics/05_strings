@@ -1,0 +1,34 @@
+"use strict"; // treat all JS code as newer version
+const nameIt = "Aditya";
+const repoName = "Learning JS";
+// console.log(nameIt+" "+repoName);
+
+// console.log(`Hello my name is ${nameIt} and I am currently working on Repo. ${repoName}`);
+
+const gameName = new String(" aditya  Dange ");
+
+console.log(gameName[0]);
+console.log(gameName.__proto__);
+console.log(gameName.length);
+console.log(gameName.toUpperCase())
+console.log(gameName.charAt(2))
+console.log(gameName.indexOf("a"))
+
+const newStr = gameName.substring(0,4);
+console.log(newStr);
+
+const anotherStr = gameName.slice(-10,8)
+console.log(anotherStr);
+
+
+const newStrOne = "   Aditya  Dange   ";
+console.log(newStrOne);
+console.log(newStrOne.trim());
+
+const url = "https://aditya.com/aditya%20dange";
+console.log(url.replace('%20','-'));
+
+console.log(url.includes('adi'))
+
+const newArr = new String("Aditya-Dange-01-Always");
+console.log(newArr.split('-')); 
