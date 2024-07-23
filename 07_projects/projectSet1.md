@@ -71,6 +71,7 @@ setInterval(function () {
 }, 1000);
 ```
 
+## project 4
 
 ```javascript
 let randomNum = parseInt(Math.random() * 10 + 1);
@@ -163,4 +164,63 @@ function newGame() {
     playGame = true;
   });
 }
+```
+
+## project 5
+
+```javascript
+const insert = document.getElementById('insert');
+
+window.addEventListener('Keydown', (e) => {
+  insert.innerHTML = `
+        <div class='color'>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Keycode</th> 
+                <th>Code</th>
+            </tr>
+            <tr>
+                <td>${e.key === ' ' ? 'Space' : e.key}</td>
+                <td>${e.keyCode}</td>
+                <td>${e.code}</td>
+            </tr>
+        </table>
+      </div>
+  `;
+});
+```
+
+## project 6
+
+```javascript
+const randomColor = () => {
+  let head = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 1; i <= 6; i++) {
+    color += head[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalId;
+
+const startChangingColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 200);
+  }
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.getElementById('start').addEventListener('click', startChangingColor);
+
+document.getElementById('stop').addEventListener('click', stopChangingColor);
+
 ```
